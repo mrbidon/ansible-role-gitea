@@ -9,5 +9,6 @@
     name: "{{ gitea_user }}"
     state: present
     group: "{{ gitea_group }}"
+    system: yes
     home: "{{ gitea_home }}"
     shell: "/bin/false"
