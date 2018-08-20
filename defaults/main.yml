@@ -2,6 +2,7 @@ gitea_app_name: "Gitea"
 gitea_user: "gitea"
 gitea_group: "gitea"
 gitea_home: "/var/lib/gitea"
+gitea_version: 1.4.3
 
 gitea_user_repo_limit: -1
 
