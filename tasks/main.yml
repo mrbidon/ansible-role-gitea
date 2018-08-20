@@ -24,7 +24,7 @@
 
 # TODO: Support other systems than systemd
 - include: install_systemd.yml
-  when: ansible_service_mgr == "systemd"
+  when: ansible_service_mgr is not defined or ansible_service_mgr == "systemd"
 
 - name: "Configure gitea"
   template:
