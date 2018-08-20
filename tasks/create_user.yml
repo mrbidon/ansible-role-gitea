@@ -1,6 +1,13 @@
-- name: "Create Gitea user"
+- name: Add group gitea
+  group:
+    name: "{{ gitea_group }}"
+    state: present
+    system: yes
+
+- name: Add user gitea
   user:
     name: "{{ gitea_user }}"
-    comment: "Gitea user"
+    state: present
+    group: "{{ gitea_group }}"
     home: "{{ gitea_home }}"
     shell: "/bin/false"
